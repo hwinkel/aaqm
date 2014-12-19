@@ -1,0 +1,38 @@
+1. CLICK source code
+---------------
+Get the click source from here: https://github.com/kohler/click/archive/master.zip
+
+unpack the file. 
+
+This package provides two files that implement our QoS algorithm: aaqm.cc and aaqm.hh. 
+When compiled with click, they add a new element AAQM to the click's package. 
+	
+
+2. How to compile
+------------------
+To add a new element click does not require to change it's existing make file. 
+
+To add the element aaqm to a click package, copy the files aaqm.cc and aaqm.hh to click-master/elements/aqm/.
+
+Configure click to compile as a kernel module. 
+
+#./configure --enable-linuxmodule. 
+
+Add AAQM to elements list. 
+
+#make elemlist
+
+Compile and Install 
+
+#make install 
+
+3. How to run
+-------------
+
+Use the click configuration file aaqm.click to test AAQM element. 
+
+To load the click module. 
+#click-install aaqm.click
+
+To unload the click module
+#click-uninstall

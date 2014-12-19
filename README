@@ -1,0 +1,21 @@
+AAQM
+=======
+An Actve Queue Management Click (Software Router) element that implements the algorithm explained under ALgorithm here: https://sites.google.com/a/ncsu.edu/ip_group12/system-design
+
+ELEMENT DESCRIPTION
+===================
+
+Name:AAQM
+Ports: 5 inputs, 5 outputs. 
+Processing: push input and pull output.
+Package:aqm
+
+
+PACKAGE CONTENTS
+================
+1. README 
+2. aaqm.cc - The source code for the element AAQM that implements QoS with buffer management.  
+3. aaqm.hh - Header file for aaqm.cc
+4. stats.sh - A shell script to monitor packet statistics from AAQM.
+5. aaqm.click - A click configuration that uses the element AAQM. 
+6. INSTALL
