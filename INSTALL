@@ -36,3 +36,29 @@ To load the click module.
 
 To unload the click module
 #click-uninstall
+
+4. Getting packet statistics
+----------------------------
+AAQM has handlers that specifies the number of packets dropped and current queue size for each queue. 
+
+Ex: To get the packet drops for Queue1 
+Using the aaqm.click
+#cat /click/aaqm/drops1
+
+The stats.sh script can be used to monitor the packet statistics continuously. 
+(Note: the stats.sh script is written specifically for the click configuration aaqm.click)
+
+Ex: 
+#sh stats.sh 
+Packet statistics
+	
+queue input count drop output
+queue1 	0 	0 	0 	0
+queue2 	0 	0 	0 	0
+queue3 	0 	0 	0 	0
+queue4 	0 	0 	0 	0
+queue5 	0 	0 	0 	0
+ Output rate: 0 pkts/sec
+ Output rate: 0 bits/sec
+
+The stats are also logged into a file called log. 
